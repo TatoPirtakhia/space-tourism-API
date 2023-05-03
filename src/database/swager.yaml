@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: todo
-  description: todo app API
+  title: space
+  description: planets API
   version: 0.1.9
 
 servers:
@@ -13,48 +13,42 @@ servers:
 
 
 paths:
-  /destination/{id}:
+  /destination:
     get:
-      summary: Get destination.
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 4
-          required: true
-          description: destination id.
+      tags:
+        - destination
       responses:
-        200:
-          description: succesfully.
-  /crew/{id}:
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /crew:
     get:
-      summary: Get crew.
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 4
-          required: true
-          description: Crew id.
+      tags:
+        - crew
       responses:
-        200:
-          description: succesfully
-  /technology/{id}:
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /technology:
     get:
-      summary: Get technology.
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 4
-          required: true
-          description: technology id
+      tags:
+        - technology
       responses:
-        200:
-          description: succesfully
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
