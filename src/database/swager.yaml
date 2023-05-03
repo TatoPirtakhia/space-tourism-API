@@ -6,7 +6,7 @@ info:
 
 servers:
   - url: https://space-lvxa.onrender.com/api
-    description: space serverdd
+    description: space serverd
   - url: http://localhost:3000/api
     description: local server
 
